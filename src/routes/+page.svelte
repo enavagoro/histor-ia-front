@@ -2,6 +2,7 @@
     import CommentsHistory from "../components/comments-history.svelte";
     import PhotoHitstory from "../components/photo-hitstory.svelte";
     import ParamsHistory from "../components/params-history.svelte";
+    import socket from "../services/socketService";
 
     let uri = "7GjPAMygtzn9lIAu0yFFWg";
 
@@ -33,7 +34,7 @@
 
     <div class="section-container">
         <div class="history-section">
-            <p style="margin-right: 20px; text-align: right">
+            <p style="margin-right: 20px; font-size: 20px; text-align: right">
                 <b>Historia de hoy</b>
             </p>
             <div class="history-content">
@@ -132,7 +133,7 @@
                 </div>
                 {#if selectedOptionIndex === 0}
                     <div class="vote-option-selected">
-                        <CommentsHistory></CommentsHistory>
+                        <CommentsHistory ></CommentsHistory>
                     </div>
                 {/if}
                 {#if selectedOptionIndex === 1}
@@ -269,8 +270,8 @@
 
     .text-option {
         text-align: center;
-        font-size: 16px;
-        font-weight: 500;
+        font-size: 18px;
+        font-weight: 600;
     }
 
     /* */
@@ -315,6 +316,14 @@
             width: 90%;
             margin-left: 5%;
             padding-bottom: 30px;
+        }
+
+        iframe {
+            width: 70%;
+            margin-left: 28%;
+            margin-bottom: 10px;
+            height: 80px; /* Adjust the height as needed */
+            background: #d2c09a;
         }
     }
 </style>

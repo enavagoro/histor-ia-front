@@ -75,7 +75,9 @@
             </div>
         {/each}
     </section>
+
     <button class="button-send"><p class="text-button">Envíar parámetros</p></button>
+
 </div>
 
 <style>
@@ -153,9 +155,7 @@
     .text-button{
         text-align: center;
         color: #000000;
-        font-weight: 800;
         font-size: 17px;
         font-weight: 700;
-
     }
 </style>
